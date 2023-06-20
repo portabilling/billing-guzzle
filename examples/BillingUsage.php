@@ -101,8 +101,7 @@ foreach ($customers as $customer) {
 }
 
 // Use Guzzle utility to ->wait() for each promose and unwrap result into array
-// If could we wrap the promoses with ->then() and set callbacks, it could start
-// to fire as each call finiheed, just after unwrap();
+// This will start all the asunc requests running and calbacks firing as each finished
 echo "T,s   Result\n";
 $responses = \GuzzleHttp\Promise\Utils::unwrap($promises);
 // And $responses populated with all the answers
