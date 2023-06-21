@@ -54,7 +54,7 @@ class GuzzleAdapter implements ClientAdapterInterface
             'fulfilled' => function (ResponseInterface $response, $index) use (&$result) {
                 $result[$index] = $response;
             },
-            'rejected' => function (RequestException $reason, $index) use (&$result) {
+            'rejected' => function (\Exception $reason, $index) use (&$result) {
                 $result[$index] = self::convertException($reason);
             },
         ]);
