@@ -31,6 +31,14 @@ Composer dependencies:
 Mind no need to put core lib in the dependency separately, it will load by composer.
 
 ## Testing
-Not yet properly tested. Complete tests in TODO.
+Tested with PHPUnit 9.6 on php 7.4 to 8.2, 100% coverage, which does not mean everything will work as intended.
+
+Current testing and compatibility status check on [Github flows](https://github.com/portabilling/billing-guzzle/actions/workflows/Compatibility.yml)
+
+To test, install in dev mode and use: 
+- `composer test` command from library root for run all standard modular tests
+- `composer livetest` to run a test against live PortaOne billing server if you have one available.
+
+For live testing run `livetest` once and it will create config file templeate. Then edit the file to provide host, username and password or token and run `livetest` again. Do not forget to remove the config file after tests!
 
 Manualy tested and used with PortaBilling release MR100.
