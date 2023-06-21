@@ -1,8 +1,8 @@
 <?php
 
 /*
- * PortaOne Billing JSON API wrapper
- * API docs: https://docs.portaone.com
+ * PortaOne Billing JSON API wrapper, Guzzle bindings
+ * See main package <https://packagist.org/packages/porta/billing>
  * (c) Alexey Pavlyuts <alexey@pavlyuts.ru>
  */
 
